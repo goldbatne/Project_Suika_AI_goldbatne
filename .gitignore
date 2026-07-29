@@ -1,0 +1,61 @@
+# =============================================
+# Unity .gitignore
+# 프로젝트 루트에 ".gitignore" 이름으로 넣으세요.
+#
+# 빠지는 것: Library 폴더 + 아래 4개 빌드 부산물 폴더
+#   - AI_subak_game_BurstDebugInformation_DoNotShip
+#   - goldbatne_subak_game_BackUpThisFolder_ButDontShipItWithYourGame
+#   - MIST_subak_game_BackUpThisFolder_ButDontShipItWithYourGame
+#   - subak_game_BackUpThisFolder_ButDontShipItWithYourGame
+# 올라가는 것: Assets, Packages, ProjectSettings, APK(.apk)
+# =============================================
+
+# --- Unity 생성 폴더 (열면 자동 재생성) ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# --- IL2CPP / Burst 빌드 부산물 (배포·버전관리 불필요) ---
+# 아래 두 패턴이 위 4개 폴더를 모두 걸러냄 (* = 앞의 이름 부분)
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip/
+
+# --- IDE / 에디터 ---
+.vs/
+.vsconfig
+.idea/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# --- Unity 크래시 리포트 ---
+sysinfo.txt
+
+# --- 빌드 산출물 (APK는 의도적으로 제외 안 함 → 올라감) ---
+*.aab
+*.unitypackage
+*.app
+
+# --- Crashlytics ---
+crashlytics-build.properties
+
+# --- OS 부산물 ---
+.DS_Store
+Thumbs.db
