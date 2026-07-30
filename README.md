@@ -64,3 +64,20 @@ goldbatne_subak_game.apk   (프로젝트 루트에 위치)
 - `Packages/` — 패키지 설정
 - `ProjectSettings/` — 프로젝트 설정
 - `goldbatne_subak_game.apk` — 빌드된 Android 실행 파일
+
+## 알려진 이슈 — SpriteAtlas 관련 에러 로그
+
+git clone이 아닌 **ZIP 다운로드 후 압축 해제**로 프로젝트를 열면,
+폴더가 중첩되어 경로가 길어지고 Windows 경로 길이 제한(260자)에
+걸려 Unity 에디터 내부 SpriteAtlas 검사 UI에서 에러 로그가 발생할 수 있습니다.
+(`DirectoryNotFoundException`, 경로에 `-main` 폴더가 중복 표시됨)
+
+**게임 실행·빌드에는 영향이 없으며**, 실제 원인은 프로젝트 경로가 아니라
+Unity 에디터의 SpriteAtlas 리포트 UI 리소스 로딩 문제입니다.
+
+권장: 아래처럼 clone으로 받아 폴더 중첩을 피해 주세요.
+\`\`\`bash
+git clone https://github.com/goldbatne/Project_Suika_AI_goldbatne.git
+\`\`\`
+또는 ZIP을 받았다면 압축 해제 후 C 드라이브 루트에 가까운 짧은 경로
+(예: `C:\Suika\`)로 옮겨서 열어 주세요.
