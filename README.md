@@ -1,6 +1,6 @@
 # Project_Suika_AI_goldbatne
 
-NAN_CONTEST 출품작 — Unity로 만든 수박게임(Suika Game)에 AI를 접목한 프로젝트입니다.
+Unity로 만든 수박게임(Suika Game)에 AI를 접목한 프로젝트입니다.
 
 ## 소개
 
